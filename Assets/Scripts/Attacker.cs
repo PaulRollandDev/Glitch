@@ -3,8 +3,12 @@ using System.Collections;
 [RequireComponent (typeof (Rigidbody2D))]
 public class Attacker : MonoBehaviour {
 
+	[Tooltip ("Average number of seconds between apperances")]
+	public float spawnTime;
+	
 	private float currentSpeed;
 	private GameObject currentTraget;
+
 	private Animator animator;
 
 

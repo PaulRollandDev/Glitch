@@ -9,11 +9,12 @@ public class MusicManager : MonoBehaviour {
 	void Awake() {
 		DontDestroyOnLoad (gameObject);
 		Debug.Log ("Dont destory on load: " + name);
-		audioSource = GetComponent<AudioSource>();
+		//audioSource = GetComponent<AudioSource>();
 	}
 	
 	void Start () {
-		//audioSource = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource>();
+		audioSource.volume = PlayPrefsManager.GetMasterVolume();
 	}
 	
 	void OnLevelWasLoaded(int level) {
